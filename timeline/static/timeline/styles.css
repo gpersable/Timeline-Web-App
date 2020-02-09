@@ -1,0 +1,84 @@
+body {
+    font-family: Work Sans;
+}
+
+h3 {
+    font-family: Viga;
+    font-size: 2.5rem;
+}
+
+.navbar {
+    background-color: #297c8b;
+}
+
+.navbar a{
+    color: white;
+    margin: 0 1.5rem;
+    transition: color .5s;
+}
+
+.navbar a:hover {
+    color: #93c8d1;
+    transition: color .5s;
+    text-decoration: none;
+}
+
+.logged-in {
+    color: #93c8d1;
+}
+
+.content {
+    margin: 5%;
+}
+
+/* Index Page */
+.index p{
+    color: #50a5b4;
+}
+
+.index h5 {
+    text-align: justify;
+}
+
+.comment {
+    margin: auto;
+    text-align: center;
+}
+
+.fa-comment {
+    font-size: 2.5rem;
+}
+
+.comment a {
+    font-size: 1.5rem;
+    margin: 5%;
+    color: #50a5b4;
+    transition: color .5s;
+}
+
+.comment a:hover {
+    text-decoration: none;
+    color: #297c8b;
+    transition: color .5s;
+}
+
+/* Detail Page */
+.commenter {
+    background-color: #297c8b;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 0.75rem;
+    margin-bottom: -0.1rem;
+}
+
+.the-comment {
+    background-color: #50a5b4;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.detail .row {
+    margin-bottom: 0.5rem;
+}

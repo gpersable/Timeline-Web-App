@@ -1,24 +1,28 @@
 {% extends 'timeline/template.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container">
+<div class="container detail">
     <div class="row">
         <div class="col-md-12">
-            <h1>{{ post.post_title }}</h1>
-            <h2>{{ post.post_content }}</h2>
+            <h3>{{ post.post_title }}</h3>
+            <h5>{{ post.post_content }}</h5>
+            <br><br>
 
             <form method="POST">
                 {% csrf_token %}
-                {{ comment }}
+                {{ comment|crispy }}
                 <button type="submit">Comment</button>
             </form>
+            <br><br>
 
+            <h4>Comments</h4>
             <ul>
                 {% for a_comment in comments %}
                 <div class="row">
                     <div class="col-md-8">
-                        <h3>{{ a_comment.post_comment }}</h3>
-                        <p>Comment by {{ a_comment.commenter }}</p>
+                        <p class="commenter">{{ a_comment.commenter }} said:</p>
+                        <h5 class="the-comment">{{ a_comment.post_comment }}</h5>
                     </div>
                 </div>
                 {% endfor %}
