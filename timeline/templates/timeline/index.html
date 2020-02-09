@@ -1,0 +1,19 @@
+{% extends 'timeline/template.html' %}
+{% block content %}
+
+<ul>
+    {% for post in posts %}
+    <div class="row">
+        <div class="col-md-8">
+            <h3>{{ post.post_title }}</h3>
+            <h5>{{ post.post_content }}</h5>
+            <p>Posted by {{ post.user }}</p>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'timeline:detail' post.id %}" class="btn btn-success">Details</a>
+        </div>
+    </div>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'timeline/template.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ post.post_title }}</h1>
+            <h2>{{ post.post_content }}</h2>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{ comment }}
+                <button type="submit">Comment</button>
+            </form>
+
+            <ul>
+                {% for a_comment in comments %}
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>{{ a_comment.post_comment }}</h3>
+                        <p>Comment by {{ a_comment.commenter }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
