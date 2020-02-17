@@ -4,10 +4,7 @@ from .forms import PostForm, PostComment
 
 def index(request):
     posts = Post.objects.all()
-    context = {
-        'posts': posts,
-    }
-    return render(request, 'timeline/index.html', context)
+    return render(request, 'timeline/index.html', {'posts': posts})
 
 def detail(request, post_id):
     post = Post.objects.get(pk=post_id)
