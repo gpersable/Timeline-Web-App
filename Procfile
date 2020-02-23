@@ -1,1 +1,1 @@
-web: gunicorn itfweb.wsgi
+web: gunicorn --pythonpath itfweb itfweb.wsgi
